@@ -7,11 +7,11 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private Transform _path;
-    [SerializeField] private Enemy _enemy;
+    [SerializeField] private Enemy _template;
 
     private Transform[] _spawnPoint;
-    private float _timePause = 2f;
     private Coroutine _coroutine;
+    private WaitForSeconds _delay = new WaitForSeconds(2f);
 
     private void Start()
     {
@@ -31,9 +31,9 @@ public class Spawner : MonoBehaviour
         {
             foreach (var point in _spawnPoint)
             {
-                Instantiate(_enemy, point.position, Quaternion.identity);
+                Instantiate(_template, point.position, Quaternion.identity);
 
-                yield return new WaitForSeconds(_timePause);
+                yield return _delay;
             }                      
         }       
     }

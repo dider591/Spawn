@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _path: {fileID: 1800479164}
-  _enemy: {fileID: 5071918799355853036, guid: f249603ebdb870b4098a3f8cce2e609c, type: 3}
+  _template: {fileID: 5071918799355853036, guid: f249603ebdb870b4098a3f8cce2e609c, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
